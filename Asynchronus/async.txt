@@ -1,0 +1,93 @@
+
+       
+function status(msg,clback1){
+if(msg == "Good Morning"){
+
+
+morning(clback1)
+
+}
+
+if(msg == "Good Morning"){
+evening(clback1)
+
+}
+
+
+if(msg == "Good Morning"){
+night(clback1)
+
+}
+
+}
+
+
+function morning(cb1){
+console.log("Good morning")
+cb1()
+}
+
+
+function morning(cb1){
+console.log("Good Evening")
+cb1()
+}
+
+
+
+function morning(cb1){
+console.log("Good night")
+cb1()
+}
+
+
+
+function calback(){
+console.log("this is a callback function")
+}
+
+
+
+status("Good Morning",calback);
+
+
+
+ function downloadFile() {
+
+            return new Promise(function (success, error) {
+
+                setInterval(() => {
+
+                    console.log("i am chaling");
+
+                    success(55);
+
+                }, 2000);
+
+            });
+        }
+
+        downloadFile().then(function (data) {
+
+            return new Promise((success, error) => {
+
+                setTimeout(() => {
+
+                    success(data + 5)
+
+                }, 3000)
+
+            });
+
+
+        }).then(function (data1) {
+
+            return data1 * 2;
+
+        }).then(function (data2) {
+
+            console.log(data2);
+
+        }).catch((err) => {
+
+        });
